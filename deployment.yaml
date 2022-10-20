@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: gateway-geomaps-nginx
+  name: gateway-geomaps-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-geomaps-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gateway-geomaps-nginx
+    spec:
+      containers:
+      - image: razeonex/nginx-geomaps-gateway:v0.0.5
+        name: gateway-geomaps-nginx
+        resources: {}
+status: {}

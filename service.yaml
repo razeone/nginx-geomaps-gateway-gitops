@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gateway-geomaps-nginx
+  name: gateway-geomaps-svc
+  namespace: geomaps
+spec:
+  ports:
+  - name: http-port
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: gateway-geomaps-nginx
+  sessionAffinity: None
+  type: LoadBalancer
