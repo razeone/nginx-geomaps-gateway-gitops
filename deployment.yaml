@@ -18,7 +18,7 @@ spec:
         app: gateway-geomaps-nginx
     spec:
       containers:
-      - image: razeonex/nginx-geomaps-gateway:v0.0.5
+      - image: razeonex/nginx-geomaps-gateway:v0.0.6
         name: gateway-geomaps-nginx
         resources: {}
 status: {}
